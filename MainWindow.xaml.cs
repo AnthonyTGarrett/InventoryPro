@@ -39,7 +39,13 @@ namespace InventoryPro
         private void btnProcessFile_Click(object sender, RoutedEventArgs e)
         {
             if (Selection_comboBox.SelectedIndex == 0)
-                MessageBox.Show("Selected: Aisle Count");
+                AisleCount.parseAisleCounts(File_textBox.Text);
+
+            if (Selection_comboBox.SelectedIndex == 1)
+                BinConsolidation.createBinConsolidation(File_textBox.Text);
+
+            if (Selection_comboBox.SelectedIndex == 2)
+                PartialPallets.createPartialPallets(File_textBox.Text);
         }
     }
 }
