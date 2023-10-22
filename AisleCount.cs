@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using OfficeOpenXml;
+using System.IO;
 
 namespace InventoryPro
 {
@@ -12,7 +13,16 @@ namespace InventoryPro
     {
         public static void parseAisleCounts(string filename)
         {
-            MessageBox.Show($"Aisle Counts : {filename}");
+            string filePath = filename;
+
+
+            using (var package = new ExcelPackage(new FileInfo(filePath)))
+            {
+                // Get the first worksheet in the Excel file (index 1-based).
+                ExcelWorksheet worksheet = package.Workbook.Worksheets[1];
+
+                
+            }
         }
     }
 }
