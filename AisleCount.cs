@@ -1,16 +1,12 @@
-﻿using System;
+﻿using OfficeOpenXml;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using OfficeOpenXml;
 using System.IO;
 
 namespace InventoryPro
 {
     internal class AisleCount
     {
+        private List<StorageBin> _storageBins = new List<StorageBin>();
         public static void parseAisleCounts(string filename)
         {
             string filePath = filename;
@@ -21,7 +17,7 @@ namespace InventoryPro
                 // Get the first worksheet in the Excel file (index 1-based).
                 ExcelWorksheet worksheet = package.Workbook.Worksheets[1];
 
-                
+
             }
         }
     }
