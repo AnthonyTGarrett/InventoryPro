@@ -1,4 +1,7 @@
-﻿namespace InventoryPro
+﻿using System.Collections.Generic;
+using System.Windows;
+
+namespace InventoryPro
 {
     internal class AisleCount
     {

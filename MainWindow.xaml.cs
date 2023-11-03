@@ -1,6 +1,5 @@
-﻿using System;
-using System.Windows;
-using Microsoft.Win32;
+﻿using System.Windows;
+
 
 
 namespace InventoryPro
