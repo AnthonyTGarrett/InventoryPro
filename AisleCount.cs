@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using OfficeOpenXml;
+﻿using OfficeOpenXml;
 using System.IO;
+using System.Windows;
 
 namespace InventoryPro
 {
@@ -14,15 +9,16 @@ namespace InventoryPro
         public static void parseAisleCounts(string filename)
         {
             string filePath = filename;
+            MessageBox.Show($"Bin Consolidate: {filename}");
 
 
-            using (var package = new ExcelPackage(new FileInfo(filePath)))
-            {
-                // Get the first worksheet in the Excel file (index 1-based).
-                ExcelWorksheet worksheet = package.Workbook.Worksheets[1];
-
-                
-            }
+            //using (var package = new ExcelPackage(new FileInfo(filePath)))
+            //{
+            //    Get the first worksheet in the Excel file(index 1 - based).
+            //    worksheet = package.Workbook.Worksheets[1];
+            //
+            //
+            //}
         }
     }
 }
